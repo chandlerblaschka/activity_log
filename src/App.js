@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React, { Fragment } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Routes
+} from "react-router-dom";
 import './App.css';
+import Dashboard from "./components/Dashboard";
+import Ag from "./components/Ag";
+import Golf from "./components/Golf";
+import Landscape from "./components/Landscape";
+import SkyHarvester from "./components/SkyHarvester";
+import Muni from "./components/Muni";
+import NavBar from "./components/NavBar";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <NavBar />
+      <Fragment>
+        <Routes>
+          <Route exact path="/Golf" element={<Golf />} />
+          <Route exact path="/Landscape" element={<Landscape />} />
+          <Route exact path="/Muni" element={<Muni />} />
+          <Route exact path="/Ag" element={<Ag />} />
+          <Route exact path="/SkyHarvester" element={<SkyHarvester />} />
+          <Route exact path="/" element={<Dashboard />} />
+        </Routes >
+      </Fragment>
+    </div >
   );
 }
 
 export default App;
+
