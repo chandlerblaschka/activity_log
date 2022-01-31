@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 
 
 function NavBar(props) {
-    const { location } = props;
     return (
         <div>
             <Nav variant="tabs" >
                 <Nav.Item>
-                    <Nav.Link as={Link} to="/" eventKey="/">Dashboard</Nav.Link>
+                    <Nav.Link as={Link} to="/" eventKey="/" >Dashboard</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                     <Nav.Link as={Link} to="/Golf" eventKey="/Golf">Golf</Nav.Link>
