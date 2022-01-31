@@ -8,7 +8,7 @@ function Golf() {
     return (
         <div>
             <h1>Golf</h1>
-            <Table striped bordered hover size="sm" style={{ width: "90%", margin: "auto" }}>
+            <Table striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
                 <thead>
                     <tr>
                         <th>Opportunity Number</th>
@@ -22,6 +22,7 @@ function Golf() {
                         <th>Due Date</th>
                         <th>Date Completed</th>
                         <th>Comments</th>
+                        <th>Edit</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,6 +38,9 @@ function Golf() {
                         <td>2/11/2022</td>
                         <td></td>
                         <td>None</td>
+                        <td>
+                            <Button size="sm" type="submit"  >Edit</Button>
+                        </td>
                     </tr>
                     <tr>
                         <td>004531</td>
@@ -50,6 +54,9 @@ function Golf() {
                         <td>2/12/2022</td>
                         <td></td>
                         <td>None</td>
+                        <td>
+                            <Button size="sm" type="submit"  >Edit</Button>
+                        </td>
                     </tr>
                     <tr>
                         <td>002541</td>
@@ -63,12 +70,15 @@ function Golf() {
                         <td>2/8/2022</td>
                         <td></td>
                         <td>None</td>
+                        <td>
+                            <Button size="sm" type="submit"  >Edit</Button>
+                        </td>
                     </tr>
                 </tbody>
             </Table>
             <br></br>
             <br></br>
-            <Table striped bordered hover size="sm" style={{ width: "90%", margin: "auto" }}>
+            <Table striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
                 <thead>
                     <tr>
                         <th>Opportunity Number</th>
