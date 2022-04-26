@@ -1,9 +1,16 @@
 import react from "react";
+import axios from "axios";
+import MasterList from "./test";
 
-function Dashboard() {
+
+
+function Dashboard(props) {
 
     return (
-        <h1>Dashboard</h1>
+        <div>
+            <h1>Dashboard</h1>
+            <MasterList />
+        </div>
     )
 }
 
