@@ -1,10 +1,51 @@
-import react from "react";
+import react, { useState } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
 import Container from "react-bootstrap/Container";
 import Table from 'react-bootstrap/Table'
+import axios from "axios";
 
 function Golf() {
+
+    let [industry, setIndustry] = useState("")
+    let [oppNumber, setOppNumber] = useState("")
+    let [name, setName] = useState("")
+    let [prodCode, setProdCode] = useState("")
+    let [request, setRequest] = useState("")
+    let [sales, setSales] = useState("")
+    let [projManager, setProjManager] = useState("")
+    let [engineer, setEngineer] = useState("")
+    let [reqDate, setReqDate] = useState(null)
+    let [dueDate, setDueDate] = useState(null)
+    let [compDate, setCompDate] = useState(null)
+    let [comments, setComments] = useState("")
+
+    const submitPost = async (e) => {
+        e.preventDefault();
+
+        axios.post('http://localhost:8000/golf/', {
+            industry: industry,
+            oppNumber: oppNumber,
+            name: name,
+            prodCode: prodCode,
+            request: request,
+            sales: sales,
+            projManager: projManager,
+            engineer: engineer,
+            reqDate: reqDate,
+            dueDate: dueDate,
+            compDate: compDate,
+            comments: comments
+        })
+            .then(res => {
+                console.log(res);
+                console.log(res.data)
+            })
+            .catch(error => {
+                console.log(error.response)
+            })
+
+    }
     return (
         <div>
             <h1>Golf</h1>
@@ -98,17 +139,17 @@ function Golf() {
                 <tbody>
                     <tr>
                         <td>
-                            <Form.Control size="sm" type="number" />
+                            <Form.Control size="sm" type="number" onChange={(e) => setIndustry(e.target.value)} />
                             <Form.Text >
                             </Form.Text>
                         </td>
                         <td>
-                            <Form.Control size="sm" type="text" />
+                            <Form.Control size="sm" type="text" onChange={(e) => setName(e.target.value)} />
                             <Form.Text >
                             </Form.Text>
                         </td>
                         <td>
-                            <Form.Select size="sm" >
+                            <Form.Select size="sm" onChange={(e) => setProdCode(e.target.value)} >
                                 <option>AGCP</option>
                                 <option>BMX</option>
                                 <option>CLT</option>
@@ -131,7 +172,7 @@ function Golf() {
                             </Form.Select>
                         </td>
                         <td>
-                            <Form.Select size="sm">
+                            <Form.Select size="sm" onChange={(e) => setRequest(e.target.value)}>
                                 <option>Book Order</option>
                                 <option>Budget $</option>
                                 <option>CSO Dwg</option>
@@ -145,12 +186,12 @@ function Golf() {
                             </Form.Select>
                         </td>
                         <td>
-                            <Form.Select size="sm" >
+                            <Form.Select size="sm" onChange={(e) => setSales(e.target.value)}  >
                                 <option>Salesman</option>
                             </Form.Select>
                         </td>
                         <td>
-                            <Form.Select size="sm" >
+                            <Form.Select size="sm" onChange={(e) => setProjManager(e.target.value)}>
                                 <option>AJC</option>
                                 <option>BXR</option>
                                 <option>CSB</option>
@@ -176,7 +217,7 @@ function Golf() {
                             </Form.Select>
                         </td>
                         <td>
-                            <Form.Select size="sm" >
+                            <Form.Select size="sm" onChange={(e) => setEngineer(e.target.value)}>
                                 <option>AJC</option>
                                 <option>BXR</option>
                                 <option>CSB</option>
@@ -202,21 +243,21 @@ function Golf() {
                             </Form.Select>
                         </td>
                         <td>
-                            <Form.Control size="sm" type="date" />
+                            <Form.Control size="sm" type="date" onChange={(e) => setReqDate(e.target.value)} />
                         </td>
                         <td>
-                            <Form.Control size="sm" type="date" />
+                            <Form.Control size="sm" type="date" onChange={(e) => setDueDate(e.target.value)} />
                         </td>
                         <td>
-                            <Form.Control size="sm" type="date" />
+                            <Form.Control size="sm" type="date" onChange={(e) => setCompDate(e.target.value)} />
                         </td>
                         <td>
-                            <Form.Control size="sm" type="text" />
+                            <Form.Control size="sm" type="text" onChange={(e) => setComments(e.target.value)} />
                             <Form.Text >
                             </Form.Text>
                         </td>
                         <td>
-                            <Button size="sm" type="submit"  >Add</Button>
+                            <Button size="sm" type="submit" onSubmit={(e) => submitPost(e)} >Add</Button>
                         </td>
                     </tr>
                 </tbody>

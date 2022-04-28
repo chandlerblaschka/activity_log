@@ -6,7 +6,7 @@ export default class MasterList extends React.Component {
         jobs: []
     }
     componentDidMount() {
-        axios.get('http://localhost:8000/master/')
+        axios.get('http://localhost:8000/dashboard/')
             .then(res => {
                 const jobs = res.data;
                 this.setState({ jobs })
