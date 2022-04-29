@@ -14,6 +14,7 @@ import SkyHarvester from "./components/SkyHarvester";
 import Muni from "./components/Muni";
 import NavBar from "./components/NavBar";
 import axios from "axios";
+import Edit from "./components/Edit"
 
 function App() {
 
@@ -34,6 +35,18 @@ function App() {
     fetchData()
   }, [])
 
+  let [golfDataOpen, setGolfDataOpen] = useState({})
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data: response } = await axios.get('http://localhost:8000/golf/open/')
+      setGolfDataOpen(response)
+    }
+    fetchData()
+
+
+  }, [])
+
   return (
     <div className="App">
       {loading && <div>Loading</div>}
@@ -43,11 +56,13 @@ function App() {
           <Fragment>
             <Routes>
               <Route exact path="/Golf" element={<Golf data={data} />} />
+              <Route exact path="/Golf/Open/" element={<Golf data={golfDataOpen} />} />
               <Route exact path="/Landscape" element={<Landscape />} />
               <Route exact path="/Muni" element={<Muni />} />
               <Route exact path="/Ag" element={<Ag />} />
               <Route exact path="/SkyHarvester" element={<SkyHarvester />} />
               <Route exact path="/" element={<Dashboard />} />
+              <Route exact path="/Edit/:id" element={<Edit data={data} />} />
             </Routes >
           </Fragment>
         </div>

@@ -1,50 +1,15 @@
 import react, { useEffect, useState } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
-import Container from "react-bootstrap/Container";
 import Table from 'react-bootstrap/Table'
 import axios from "axios";
-import { Link } from 'react-router-dom'
-import Edit from "./Edit"
+import { useParams } from 'react-router-dom'
 
-function Golf(props) {
+function Edit() {
 
-    // console.log(props.data)
-    let actions = Array.from(props.data)
-    let actionList = []
-
-    let openFilter = ['Show Open Jobs', 'Show All Jobs']
-
-    // function filterOpenJobs() {
-    //     if (window.location == "/Golf/") {
-    //         console.log(openFilter[0])
-    //     }
-    // }
-
-    if (actions) {
-        actionList = actions.map((action) => {
-            return <tr key={action.id}>
-                <td>{action.oppNumber}</td>
-                <td>{action.name}</td>
-                <td>{action.prodCode}</td>
-                <td>{action.request}</td>
-                <td>{action.sales}</td>
-                <td>{action.projManager}</td>
-                <td>{action.engineer}</td>
-                <td>{action.reqDate}</td>
-                <td>{action.dueDate}</td>
-                <td>{action.compDate}</td>
-                <td>{action.comments}</td>
-                <td>
-                    <Link to={`/edit/${action.id}`}>
-                        <Button size="sm" type="submit">Edit</Button>
-                    </Link>
-                </td>
-            </tr >
-        })
-    }
-
-    // let [industry, setIndustry] = useState("")
+    const { id } = useParams()
+    let [data, setData] = useState({})
+    let [industry, setIndustry] = useState("")
     let [oppNumber, setOppNumber] = useState("")
     let [name, setName] = useState("")
     let [prodCode, setProdCode] = useState("")
@@ -56,12 +21,38 @@ function Golf(props) {
     let [dueDate, setDueDate] = useState(null)
     let [compDate, setCompDate] = useState(null)
     let [comments, setComments] = useState("")
+    let [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data: response } = await axios.get(`http://localhost:8000/edit/${id}`)
+            setData(response)
+            setIndustry(response.industry)
+            setOppNumber(response.oppNumber)
+            setName(response.name)
+            setProdCode(response.prodCode)
+            setRequest(response.request)
+            setSales(response.sales)
+            setProjManager(response.projManager)
+            setEngineer(response.engineer)
+            setReqDate(response.reqDate)
+            setDueDate(response.dueDate)
+            setCompDate(response.compDate)
+            setComments(response.comments)
+        }
+        fetchData()
+
+
+    }, [id])
+
+    console.log(data)
+    console.log(industry)
 
     const submitPost = async (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:8000/golf/', {
-            industry: "Golf",
+        axios.put(`http://localhost:8000/edit/${id}`, {
+            industry: industry,
             oppNumber: oppNumber,
             name: name,
             prodCode: prodCode,
@@ -77,7 +68,7 @@ function Golf(props) {
             .then(res => {
                 console.log(res);
                 console.log(res.data)
-                window.location.reload()
+                window.location = `/${industry}`
             })
             .catch(error => {
                 console.log(error.response)
@@ -86,36 +77,12 @@ function Golf(props) {
     }
     return (
         <div>
-            <h1>Golf</h1>
-            {/* On click change button to all jobs. */}
-
-            <Table striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
-                <thead>
-                    <tr>
-                        <th>Opportunity Number</th>
-                        <th>Project Name</th>
-                        <th>Product Code</th>
-                        <th>Request</th>
-                        <th>Salesman</th>
-                        <th>Project Manager</th>
-                        <th>Engineer</th>
-                        <th>Request Date</th>
-                        <th>Due Date</th>
-                        <th>Date Completed</th>
-                        <th>Comments</th>
-                        <th>Edit</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {actionList}
-                </tbody>
-            </Table>
-            <br></br>
-            <br></br>
+            <h1>Edit Action Item</h1>
             <form onSubmit={(e) => submitPost(e)}>
                 <Table striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
                     <thead>
                         <tr>
+                            <th>Industry</th>
                             <th>Opportunity Number</th>
                             <th>Project Name</th>
                             <th>Product Code</th>
@@ -127,25 +94,33 @@ function Golf(props) {
                             <th>Due Date</th>
                             <th>Date Completed</th>
                             <th>Comments</th>
-                            <th>Add</th>
+                            <th>Update</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         <tr>
                             <td>
-                                <Form.Control size="sm" type="number" onChange={(e) => setOppNumber(e.target.value)} />
+                                <Form.Select size="sm" onChange={(e) => setIndustry(e.target.value)} value={industry}  >
+                                    <option value="Golf">Golf</option>
+                                    <option value="Landscape">Landscape</option>
+                                    <option value="Muni">Muni</option>
+                                    <option value="Ag">Ag</option>
+                                    <option value="SkyHarvester">SkyHarvester</option>
+                                </Form.Select>
+                            </td>
+                            <td>
+                                <Form.Control size="sm" type="number" onChange={(e) => setOppNumber(e.target.value)} value={oppNumber} />
                                 <Form.Text >
                                 </Form.Text>
                             </td>
                             <td>
-                                <Form.Control size="sm" type="text" onChange={(e) => setName(e.target.value)} />
+                                <Form.Control size="sm" type="text" onChange={(e) => setName(e.target.value)} value={name} />
                                 <Form.Text >
                                 </Form.Text>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setProdCode(e.target.value)} >
-                                    <option value={"Default"} hidden>PC</option>
+                                <Form.Select size="sm" onChange={(e) => setProdCode(e.target.value)} value={prodCode}>
                                     <option>AGCP</option>
                                     <option>BMX</option>
                                     <option>CLT</option>
@@ -168,8 +143,7 @@ function Golf(props) {
                                 </Form.Select>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setRequest(e.target.value)}>
-                                    <option value={"Default"} hidden>Request</option>
+                                <Form.Select size="sm" onChange={(e) => setRequest(e.target.value)} value={request}>
                                     <option>Book Order</option>
                                     <option>Budget $</option>
                                     <option>CSO Dwg</option>
@@ -183,8 +157,7 @@ function Golf(props) {
                                 </Form.Select>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setSales(e.target.value)}  >
-                                    <option value={"Default"} hidden>Salesman</option>
+                                <Form.Select size="sm" onChange={(e) => setSales(e.target.value)} value={sales}>
                                     <option>Blaschka</option>
                                     <option>Campbell</option>
                                     <option>Gentile</option>
@@ -202,8 +175,7 @@ function Golf(props) {
                                 </Form.Select>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setProjManager(e.target.value)}>
-                                    <option value={"Default"} hidden>Project Manager</option>
+                                <Form.Select size="sm" onChange={(e) => setProjManager(e.target.value)} value={projManager}>
                                     <option>AJC</option>
                                     <option>BXR</option>
                                     <option>CSB</option>
@@ -229,8 +201,7 @@ function Golf(props) {
                                 </Form.Select>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setEngineer(e.target.value)}>
-                                    <option value={"Default"} hidden>Engineer</option>
+                                <Form.Select size="sm" onChange={(e) => setEngineer(e.target.value)} value={engineer}>
                                     <option>AJC</option>
                                     <option>BXR</option>
                                     <option>CSB</option>
@@ -256,30 +227,27 @@ function Golf(props) {
                                 </Form.Select>
                             </td>
                             <td>
-                                <Form.Control size="sm" type="date" onChange={(e) => setReqDate(e.target.value)} />
+                                <Form.Control size="sm" type="date" onChange={(e) => setReqDate(e.target.value)} value={reqDate} />
                             </td>
                             <td>
-                                <Form.Control size="sm" type="date" onChange={(e) => setDueDate(e.target.value)} />
+                                <Form.Control size="sm" type="date" onChange={(e) => setDueDate(e.target.value)} value={dueDate} />
                             </td>
                             <td>
-                                <Form.Control size="sm" type="date" onChange={(e) => setCompDate(e.target.value)} />
+                                <Form.Control size="sm" type="date" onChange={(e) => setCompDate(e.target.value)} value={compDate} />
                             </td>
                             <td>
-                                <Form.Control size="sm" type="text" onChange={(e) => setComments(e.target.value)} />
+                                <Form.Control size="sm" type="text" onChange={(e) => setComments(e.target.value)} value={comments} />
                                 <Form.Text >
                                 </Form.Text>
                             </td>
                             <td>
-                                <Button size="sm" type="submit"  >Add</Button>
+                                <Button size="sm" type="submit"  >Update</Button>
                             </td>
                         </tr>
                     </tbody>
                 </Table>
             </form>
-            {/* Add Edit function below to update within the industry. */}
-            {/* <Edit /> */}
         </div>
     )
 }
-
-export default Golf
+export default Edit
