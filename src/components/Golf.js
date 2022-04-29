@@ -13,13 +13,20 @@ function Golf(props) {
     let actions = Array.from(props.data)
     let actionList = []
 
-    let openFilter = ['Show Open Jobs', 'Show All Jobs']
+    let buttonText = ''
+    let buttonLink = ''
 
-    // function filterOpenJobs() {
-    //     if (window.location == "/Golf/") {
-    //         console.log(openFilter[0])
-    //     }
-    // }
+    if (window.location == 'http://localhost:3000/Golf') {
+        console.log("Showing All Golf")
+        buttonText = 'Show Open'
+        buttonLink = '/Golf/Open'
+    }
+
+    if (window.location == 'http://localhost:3000/Golf/Open') {
+        console.log("Showing Open")
+        buttonText = 'Show All'
+        buttonLink = '/Golf'
+    }
 
     if (actions) {
         actionList = actions.map((action) => {
@@ -88,7 +95,9 @@ function Golf(props) {
         <div>
             <h1>Golf</h1>
             {/* On click change button to all jobs. */}
-
+            <Link to={buttonLink}>
+                <Button size="sm" type="submit">{buttonText}</Button>
+            </Link>
             <Table striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
                 <thead>
                     <tr>

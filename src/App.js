@@ -56,7 +56,7 @@ function App() {
           <Fragment>
             <Routes>
               <Route exact path="/Golf" element={<Golf data={data} />} />
-              <Route exact path="/Golf/Open/" element={<Golf data={golfDataOpen} />} />
+              <Route exact path="/Golf/Open" element={<Golf data={golfDataOpen} />} />
               <Route exact path="/Landscape" element={<Landscape />} />
               <Route exact path="/Muni" element={<Muni />} />
               <Route exact path="/Ag" element={<Ag />} />
