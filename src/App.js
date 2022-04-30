@@ -43,8 +43,6 @@ function App() {
       setGolfDataOpen(response)
     }
     fetchData()
-
-
   }, [])
 
   return (

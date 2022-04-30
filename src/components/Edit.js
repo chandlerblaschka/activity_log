@@ -75,6 +75,11 @@ function Edit() {
             })
 
     }
+
+    const deleteAction = async (id) => {
+        await axios.delete(`http://localhost:8000/edit/${id}/`)
+    }
+
     return (
         <div>
             <h1>Edit Action Item</h1>
@@ -95,6 +100,7 @@ function Edit() {
                             <th>Date Completed</th>
                             <th>Comments</th>
                             <th>Update</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
 
@@ -171,6 +177,7 @@ function Edit() {
                                     <option>Pifer</option>
                                     <option>Salisbury</option>
                                     <option>Slingerland</option>
+                                    <option>Sylvester</option>
                                     <option>Thornton</option>
                                 </Form.Select>
                             </td>
@@ -189,6 +196,7 @@ function Edit() {
                                     <option>GDS</option>
                                     <option>GOZ</option>
                                     <option>JWN</option>
+                                    <option>IB</option>
                                     <option>MJH</option>
                                     <option>MJW</option>
                                     <option>MTM</option>
@@ -215,6 +223,7 @@ function Edit() {
                                     <option>GDS</option>
                                     <option>GOZ</option>
                                     <option>JWN</option>
+                                    <option>IB</option>
                                     <option>MJH</option>
                                     <option>MJW</option>
                                     <option>MTM</option>
@@ -242,6 +251,9 @@ function Edit() {
                             </td>
                             <td>
                                 <Button size="sm" type="submit"  >Update</Button>
+                            </td>
+                            <td>
+                                <Button size="sm" type="submit" variant="danger" onClick={() => deleteAction(data.id)}>Delete</Button>
                             </td>
                         </tr>
                     </tbody>

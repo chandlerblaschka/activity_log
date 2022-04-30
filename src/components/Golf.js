@@ -95,32 +95,9 @@ function Golf(props) {
         <div>
             <h1>Golf</h1>
             {/* On click change button to all jobs. */}
-            <Link to={buttonLink}>
+            {/* <Link to={buttonLink}>
                 <Button size="sm" type="submit">{buttonText}</Button>
-            </Link>
-            <Table striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
-                <thead>
-                    <tr>
-                        <th>Opportunity Number</th>
-                        <th>Project Name</th>
-                        <th>Product Code</th>
-                        <th>Request</th>
-                        <th>Salesman</th>
-                        <th>Project Manager</th>
-                        <th>Engineer</th>
-                        <th>Request Date</th>
-                        <th>Due Date</th>
-                        <th>Date Completed</th>
-                        <th>Comments</th>
-                        <th>Edit</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {actionList}
-                </tbody>
-            </Table>
-            <br></br>
-            <br></br>
+            </Link> */}
             <form onSubmit={(e) => submitPost(e)}>
                 <Table striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
                     <thead>
@@ -207,6 +184,7 @@ function Golf(props) {
                                     <option>Pifer</option>
                                     <option>Salisbury</option>
                                     <option>Slingerland</option>
+                                    <option>Sylvester</option>
                                     <option>Thornton</option>
                                 </Form.Select>
                             </td>
@@ -226,6 +204,7 @@ function Golf(props) {
                                     <option>GDS</option>
                                     <option>GOZ</option>
                                     <option>JWN</option>
+                                    <option>IB</option>
                                     <option>MJH</option>
                                     <option>MJW</option>
                                     <option>MTM</option>
@@ -253,6 +232,7 @@ function Golf(props) {
                                     <option>GDS</option>
                                     <option>GOZ</option>
                                     <option>JWN</option>
+                                    <option>IB</option>
                                     <option>MJH</option>
                                     <option>MJW</option>
                                     <option>MTM</option>
@@ -287,6 +267,49 @@ function Golf(props) {
             </form>
             {/* Add Edit function below to update within the industry. */}
             {/* <Edit /> */}
+            <br></br>
+            <br></br>
+            <Table striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
+                <thead>
+                    <tr>
+                        <th>Opportunity Number</th>
+                        <th>Project Name</th>
+                        <th>Product Code</th>
+                        <th>Request</th>
+                        <th>Salesman</th>
+                        <th>Project Manager</th>
+                        <th>Engineer</th>
+                        <th>Request Date</th>
+                        <th>Due Date</th>
+                        <th>Date Completed</th>
+                        <th>Comments</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>
+                            <Link to={buttonLink}>
+                                <Button size="sm" type="submit">{buttonText}</Button>
+                            </Link>
+                        </th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {actionList}
+                </tbody>
+            </Table>
         </div>
     )
 }
