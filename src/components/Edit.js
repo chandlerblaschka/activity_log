@@ -77,7 +77,8 @@ function Edit() {
     }
 
     const deleteAction = async (id) => {
-        await axios.delete(`http://localhost:8000/edit/${id}/`)
+        await axios.delete(`http://localhost:8000/edit/${id}`)
+        window.location = `/${industry}`
     }
 
     return (
@@ -121,12 +122,12 @@ function Edit() {
                                 </Form.Text>
                             </td>
                             <td>
-                                <Form.Control size="sm" type="text" onChange={(e) => setName(e.target.value)} value={name} />
+                                <Form.Control required size="sm" type="text" onChange={(e) => setName(e.target.value)} value={name} />
                                 <Form.Text >
                                 </Form.Text>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setProdCode(e.target.value)} value={prodCode}>
+                                <Form.Select required size="sm" onChange={(e) => setProdCode(e.target.value)} value={prodCode}>
                                     <option>AGCP</option>
                                     <option>BMX</option>
                                     <option>CLT</option>
@@ -149,7 +150,7 @@ function Edit() {
                                 </Form.Select>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setRequest(e.target.value)} value={request}>
+                                <Form.Select required size="sm" onChange={(e) => setRequest(e.target.value)} value={request}>
                                     <option>Book Order</option>
                                     <option>Budget $</option>
                                     <option>CSO Dwg</option>
@@ -163,7 +164,7 @@ function Edit() {
                                 </Form.Select>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setSales(e.target.value)} value={sales}>
+                                <Form.Select required size="sm" onChange={(e) => setSales(e.target.value)} value={sales}>
                                     <option>Blaschka</option>
                                     <option>Campbell</option>
                                     <option>Gentile</option>
@@ -182,7 +183,7 @@ function Edit() {
                                 </Form.Select>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setProjManager(e.target.value)} value={projManager}>
+                                <Form.Select required size="sm" onChange={(e) => setProjManager(e.target.value)} value={projManager}>
                                     <option>AJC</option>
                                     <option>BXR</option>
                                     <option>CSB</option>
@@ -209,7 +210,7 @@ function Edit() {
                                 </Form.Select>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setEngineer(e.target.value)} value={engineer}>
+                                <Form.Select required size="sm" onChange={(e) => setEngineer(e.target.value)} value={engineer}>
                                     <option>AJC</option>
                                     <option>BXR</option>
                                     <option>CSB</option>
@@ -250,10 +251,10 @@ function Edit() {
                                 </Form.Text>
                             </td>
                             <td>
-                                <Button size="sm" type="submit"  >Update</Button>
+                                <Button size="sm" type="submit">Update</Button>
                             </td>
                             <td>
-                                <Button size="sm" type="submit" variant="danger" onClick={() => deleteAction(data.id)}>Delete</Button>
+                                <Button size="sm" variant="danger" onClick={() => deleteAction(data.id)}>Delete</Button>
                             </td>
                         </tr>
                     </tbody>

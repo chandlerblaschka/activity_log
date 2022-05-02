@@ -9,9 +9,36 @@ import Edit from "./Edit"
 
 function Golf(props) {
 
+    let [golfToday, setGolfToday] = useState({})
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data: response } = await axios.get('http://localhost:8000/golf/today/')
+            setGolfToday(response)
+        }
+        fetchData()
+    }, [])
+
+    let dueToday = Array.from(golfToday)
+    let displayDueToday = dueToday.length
+
+    let [golfThisWeek, setGolfThisWeek] = useState({})
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data: response } = await axios.get('http://localhost:8000/golf/this_week/')
+            setGolfThisWeek(response)
+        }
+        fetchData()
+    }, [])
+
+    let dueThisWeek = Array.from(golfThisWeek)
+    let displayDueThisWeek = dueThisWeek.length
+
     // console.log(props.data)
     let actions = Array.from(props.data)
     let actionList = []
+
 
     let buttonText = ''
     let buttonLink = ''
@@ -28,18 +55,33 @@ function Golf(props) {
         buttonLink = '/Golf'
     }
 
+    let indexArray = []
+    for (let i = 0; i < dueToday.length; i++) {
+        // console.log(dueToday[i].id)
+        for (let j = 0; j < actions.length; j++) {
+            if (actions[j].id == dueToday[i].id) {
+                // console.log(actions[j].id)
+                indexArray.push(j)
+                console.log(indexArray)
+            }
+        }
+    }
+
     if (actions) {
-        actionList = actions.map((action) => {
-            return <tr key={action.id}>
-                <td>{action.oppNumber}</td>
-                <td>{action.name}</td>
+        actionList = actions.map((action, index) => {
+            //ISSUE IS HERE add styling within loop?
+            if (index = indexArray.indexOf(index)) {
+            }
+            return < tr key={action.id} >
+                <td >{action.oppNumber}</td>
+                <td >{action.name}</td>
                 <td>{action.prodCode}</td>
                 <td>{action.request}</td>
                 <td>{action.sales}</td>
                 <td>{action.projManager}</td>
                 <td>{action.engineer}</td>
                 <td>{action.reqDate}</td>
-                <td>{action.dueDate}</td>
+                <td style={{ color: index = indexArray[index] ? "red" : "black" }} >{action.dueDate}</td>
                 <td>{action.compDate}</td>
                 <td>{action.comments}</td>
                 <td>
@@ -47,7 +89,7 @@ function Golf(props) {
                         <Button size="sm" type="submit">Edit</Button>
                     </Link>
                 </td>
-            </tr >
+            </ tr>
         })
     }
 
@@ -94,6 +136,8 @@ function Golf(props) {
     return (
         <div>
             <h1>Golf</h1>
+            <h2>Due Today: {displayDueToday}</h2>
+            <h2>Due This Week: {displayDueThisWeek}</h2>
             {/* On click change button to all jobs. */}
             {/* <Link to={buttonLink}>
                 <Button size="sm" type="submit">{buttonText}</Button>
@@ -125,13 +169,13 @@ function Golf(props) {
                                 </Form.Text>
                             </td>
                             <td>
-                                <Form.Control size="sm" type="text" onChange={(e) => setName(e.target.value)} />
+                                <Form.Control required size="sm" type="text" onChange={(e) => setName(e.target.value)} />
                                 <Form.Text >
                                 </Form.Text>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setProdCode(e.target.value)} >
-                                    <option value={"Default"} hidden>PC</option>
+                                <Form.Select required size="sm" onChange={(e) => setProdCode(e.target.value)} >
+                                    <option value="" hidden>Product Code</option>
                                     <option>AGCP</option>
                                     <option>BMX</option>
                                     <option>CLT</option>
@@ -154,8 +198,8 @@ function Golf(props) {
                                 </Form.Select>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setRequest(e.target.value)}>
-                                    <option value={"Default"} hidden>Request</option>
+                                <Form.Select required size="sm" onChange={(e) => setRequest(e.target.value)}>
+                                    <option value="" hidden>Request</option>
                                     <option>Book Order</option>
                                     <option>Budget $</option>
                                     <option>CSO Dwg</option>
@@ -169,8 +213,8 @@ function Golf(props) {
                                 </Form.Select>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setSales(e.target.value)}  >
-                                    <option value={"Default"} hidden>Salesman</option>
+                                <Form.Select required size="sm" onChange={(e) => setSales(e.target.value)}  >
+                                    <option value="" hidden>Salesman</option>
                                     <option>Blaschka</option>
                                     <option>Campbell</option>
                                     <option>Gentile</option>
@@ -189,8 +233,8 @@ function Golf(props) {
                                 </Form.Select>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setProjManager(e.target.value)}>
-                                    <option value={"Default"} hidden>Project Manager</option>
+                                <Form.Select required size="sm" onChange={(e) => setProjManager(e.target.value)}>
+                                    <option value="" hidden>Project Manager</option>
                                     <option>AJC</option>
                                     <option>BXR</option>
                                     <option>CSB</option>
@@ -217,8 +261,8 @@ function Golf(props) {
                                 </Form.Select>
                             </td>
                             <td>
-                                <Form.Select size="sm" onChange={(e) => setEngineer(e.target.value)}>
-                                    <option value={"Default"} hidden>Engineer</option>
+                                <Form.Select required size="sm" onChange={(e) => setEngineer(e.target.value)}>
+                                    <option value="" hidden>Engineer</option>
                                     <option>AJC</option>
                                     <option>BXR</option>
                                     <option>CSB</option>
