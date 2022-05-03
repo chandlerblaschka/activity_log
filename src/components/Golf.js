@@ -136,8 +136,8 @@ function Golf(props) {
     return (
         <div>
             <h1>Golf</h1>
-            <h2>Due Today: {displayDueToday}</h2>
-            <h2>Due This Week: {displayDueThisWeek}</h2>
+            <h2>Due Today/Past Due: {displayDueToday}</h2>
+            <h2>Due This Week (Today-Friday): {displayDueThisWeek}</h2>
             {/* On click change button to all jobs. */}
             {/* <Link to={buttonLink}>
                 <Button size="sm" type="submit">{buttonText}</Button>
@@ -201,15 +201,16 @@ function Golf(props) {
                                 <Form.Select required size="sm" onChange={(e) => setRequest(e.target.value)}>
                                     <option value="" hidden>Request</option>
                                     <option>Book Order</option>
-                                    <option>Budget $</option>
+                                    <option>Budget</option>
+                                    <option>Change Order</option>
                                     <option>CSO Dwg</option>
                                     <option>Drawing</option>
-                                    <option>Elec Doc's</option>
+                                    <option>Elec Docs</option>
                                     <option>Other</option>
                                     <option>Quote</option>
                                     <option>Release Mtg</option>
                                     <option>Spec</option>
-                                    <option>Sub/O&M</option>
+                                    <option>Sub OM</option>
                                 </Form.Select>
                             </td>
                             <td>

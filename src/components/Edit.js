@@ -152,15 +152,16 @@ function Edit() {
                             <td>
                                 <Form.Select required size="sm" onChange={(e) => setRequest(e.target.value)} value={request}>
                                     <option>Book Order</option>
-                                    <option>Budget $</option>
+                                    <option>Budget</option>
+                                    <option>Change Order</option>
                                     <option>CSO Dwg</option>
                                     <option>Drawing</option>
-                                    <option>Elec Doc's</option>
+                                    <option>Elec Docs</option>
                                     <option>Other</option>
                                     <option>Quote</option>
                                     <option>Release Mtg</option>
                                     <option>Spec</option>
-                                    <option>Sub/O&M</option>
+                                    <option>Sub OM</option>
                                 </Form.Select>
                             </td>
                             <td>

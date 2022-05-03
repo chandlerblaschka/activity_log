@@ -15,6 +15,7 @@ import Muni from "./components/Muni";
 import NavBar from "./components/NavBar";
 import axios from "axios";
 import Edit from "./components/Edit"
+import GolfData from "./components/GolfData";
 
 function App() {
 
@@ -60,6 +61,7 @@ function App() {
               <Route exact path="/Ag" element={<Ag />} />
               <Route exact path="/SkyHarvester" element={<SkyHarvester />} />
               <Route exact path="/" element={<Dashboard />} />
+              <Route exact path="/Dashboard/Golf/" element={<GolfData data={data} />} />
               <Route exact path="/Edit/:id" element={<Edit data={data} />} />
             </Routes >
           </Fragment>
