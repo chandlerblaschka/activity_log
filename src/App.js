@@ -16,18 +16,23 @@ import NavBar from "./components/NavBar";
 import axios from "axios";
 import Edit from "./components/Edit"
 import GolfData from "./components/GolfData";
+import Opportunity from "./components/Opportunity";
 
 function App() {
 
   let [loading, setLoading] = useState(true)
-  let [data, setData] = useState({})
+  let [golfData, setGolfData] = useState({})
+  let [masterData, setMasterData] = useState({})
 
+  // update to reflect all data once other industries are populated
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: response } = await axios.get('http://localhost:8000/golf/')
-        setData(response)
+        const { data: golfResponse } = await axios.get('http://localhost:8000/industry/Golf')
+        setGolfData(golfResponse)
+        const { data: masterResponse } = await axios.get('http://localhost:8000/dashboard/')
+        setMasterData(masterResponse)
       } catch (error) {
         console.error(error.message)
       }
@@ -40,7 +45,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data: response } = await axios.get('http://localhost:8000/golf/open/')
+      const { data: response } = await axios.get('http://localhost:8000/Golf/open/')
       setGolfDataOpen(response)
     }
     fetchData()
@@ -54,15 +59,17 @@ function App() {
           <NavBar />
           <Fragment>
             <Routes>
-              <Route exact path="/Golf" element={<Golf data={data} />} />
+              <Route exact path="/Golf" element={<Golf data={golfData} />} />
               <Route exact path="/Golf/Open" element={<Golf data={golfDataOpen} />} />
-              <Route exact path="/Landscape" element={<Landscape />} />
+              {/* <Route exact path="/Landscape" element={<Landscape data={landscapeData} />} />
+              <Route exact path="/Landscape/Open" element={<Landscape data={landscapeDataOpen} />} /> */}
               <Route exact path="/Muni" element={<Muni />} />
               <Route exact path="/Ag" element={<Ag />} />
               <Route exact path="/SkyHarvester" element={<SkyHarvester />} />
               <Route exact path="/" element={<Dashboard />} />
-              <Route exact path="/Dashboard/Golf/" element={<GolfData data={data} />} />
-              <Route exact path="/Edit/:id" element={<Edit data={data} />} />
+              <Route exact path="/Dashboard/Golf/" element={<GolfData data={golfData} />} />
+              <Route exact path="/Edit/:id" element={<Edit data={masterData} />} />
+              <Route exact path="/Opportunity/:oppNumber" element={<Opportunity data={golfData} />} />
             </Routes >
           </Fragment>
         </div>

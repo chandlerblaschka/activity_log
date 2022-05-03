@@ -13,7 +13,7 @@ function Golf(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/golf/today/')
+            const { data: response } = await axios.get('http://localhost:8000/Golf/today/')
             setGolfToday(response)
         }
         fetchData()
@@ -26,7 +26,7 @@ function Golf(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/golf/this_week/')
+            const { data: response } = await axios.get('http://localhost:8000/Golf/this_week/')
             setGolfThisWeek(response)
         }
         fetchData()
@@ -73,7 +73,7 @@ function Golf(props) {
             if (index = indexArray.indexOf(index)) {
             }
             return < tr key={action.id} >
-                <td >{action.oppNumber}</td>
+                <td ><Link to={`/opportunity/${action.oppNumber}`}>{action.oppNumber}</Link></td>
                 <td >{action.name}</td>
                 <td>{action.prodCode}</td>
                 <td>{action.request}</td>
@@ -109,7 +109,7 @@ function Golf(props) {
     const submitPost = async (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:8000/golf/', {
+        axios.post('http://localhost:8000/industry/Golf', {
             industry: "Golf",
             oppNumber: oppNumber,
             name: name,

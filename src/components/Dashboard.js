@@ -8,8 +8,8 @@ import GolfData from './GolfData';
 import '../components/dashboard.css'
 import DashboardTable from './DashboardTable';
 
-function Dashboard(props) {
-    console.log(props.data)
+function Dashboard() {
+    // console.log(props.data)
 
 
     return (
