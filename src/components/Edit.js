@@ -68,7 +68,7 @@ function Edit() {
             .then(res => {
                 console.log(res);
                 console.log(res.data)
-                window.location = `/${industry}`
+                window.location = `/${industry}/Open`
             })
             .catch(error => {
                 console.log(error.response)
@@ -78,7 +78,7 @@ function Edit() {
 
     const deleteAction = async (id) => {
         await axios.delete(`http://localhost:8000/edit/${id}`)
-        window.location = `/${industry}`
+        window.location = `/${industry}/Open`
     }
 
     return (
@@ -113,7 +113,7 @@ function Edit() {
                                     <option value="Landscape">Landscape</option>
                                     <option value="Muni">Muni</option>
                                     <option value="Ag">Ag</option>
-                                    <option value="SkyHarvester">SkyHarvester</option>
+                                    <option value="Skyharvester">SkyHarvester</option>
                                 </Form.Select>
                             </td>
                             <td>

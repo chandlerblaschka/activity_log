@@ -11,19 +11,19 @@ function NavBar(props) {
                     <Nav.Link as={Link} to="/" eventKey="/" >Dashboard</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link as={Link} to="/Golf" eventKey="/Golf">Golf</Nav.Link>
+                    <Nav.Link as={Link} to="/Golf/Open" eventKey="/Golf">Golf</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link as={Link} to="Landscape" eventKey="/Landscape">Landscape</Nav.Link>
+                    <Nav.Link as={Link} to="Landscape/Open" eventKey="/Landscape">Landscape</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link as={Link} to="/Muni" eventKey="/Muni">Muni</Nav.Link>
+                    <Nav.Link as={Link} to="/Muni/Open" eventKey="/Muni">Muni</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link as={Link} to="/Ag" eventKey="/Ag">Ag</Nav.Link>
+                    <Nav.Link as={Link} to="/Ag/Open" eventKey="/Ag">Ag</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link as={Link} to="/SkyHarvester" eventKey="/SkyHarvester">SkyHarvester</Nav.Link>
+                    <Nav.Link as={Link} to="/Skyharvester/Open" eventKey="/Skyharvester">SkyHarvester</Nav.Link>
                 </Nav.Item>
             </Nav>
         </div>

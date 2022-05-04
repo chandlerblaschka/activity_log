@@ -2,14 +2,147 @@
 // import MasterList from "./test";
 // import AddTaskMaster from "./submitForm";
 import React from 'react';
-import { Container } from 'react-bootstrap';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
 import GolfData from './GolfData';
 import '../components/dashboard.css'
 import DashboardTable from './DashboardTable';
+import react, { useEffect, useState } from "react";
+import Container from "react-bootstrap/Container";
+import Table from 'react-bootstrap/Table'
+import axios from "axios";
+import { Link } from 'react-router-dom'
 
 function Dashboard() {
     // console.log(props.data)
+    let [golfToday, setGolfToday] = useState({})
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data: response } = await axios.get('http://localhost:8000/Golf/today/')
+            setGolfToday(response)
+        }
+        fetchData()
+    }, [])
+
+    let golfDueToday = Array.from(golfToday)
+    let displayGolfDueToday = golfDueToday.length
+
+    let [golfThisWeek, setGolfThisWeek] = useState({})
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data: response } = await axios.get('http://localhost:8000/Golf/this_week/')
+            setGolfThisWeek(response)
+        }
+        fetchData()
+    }, [])
+
+    let golfDueThisWeek = Array.from(golfThisWeek)
+    let displayGolfDueThisWeek = golfDueThisWeek.length
+
+    let [landscapeToday, setLandscapeToday] = useState({})
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data: response } = await axios.get('http://localhost:8000/Landscape/today/')
+            setLandscapeToday(response)
+        }
+        fetchData()
+    }, [])
+
+    let landscapeDueToday = Array.from(landscapeToday)
+    let displayLandscapeDueToday = landscapeDueToday.length
+
+    let [landscapeThisWeek, setLandscapeThisWeek] = useState({})
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data: response } = await axios.get('http://localhost:8000/Landscape/this_week/')
+            setLandscapeThisWeek(response)
+        }
+        fetchData()
+    }, [])
+
+    let landscapeDueThisWeek = Array.from(landscapeThisWeek)
+    let displayLandscapeDueThisWeek = landscapeDueThisWeek.length
+
+    let [muniToday, setMuniToday] = useState({})
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data: response } = await axios.get('http://localhost:8000/Muni/today/')
+            setMuniToday(response)
+        }
+        fetchData()
+    }, [])
+
+    let muniDueToday = Array.from(muniToday)
+    let displayMuniDueToday = muniDueToday.length
+
+    let [muniThisWeek, setMuniThisWeek] = useState({})
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data: response } = await axios.get('http://localhost:8000/Muni/this_week/')
+            setMuniThisWeek(response)
+        }
+        fetchData()
+    }, [])
+
+    let muniDueThisWeek = Array.from(muniThisWeek)
+    let displayMuniDueThisWeek = muniDueThisWeek.length
+
+    let [agToday, setAgToday] = useState({})
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data: response } = await axios.get('http://localhost:8000/Ag/today/')
+            setAgToday(response)
+        }
+        fetchData()
+    }, [])
+
+    let agDueToday = Array.from(agToday)
+    let displayAgDueToday = agDueToday.length
+
+    let [agThisWeek, setAgThisWeek] = useState({})
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data: response } = await axios.get('http://localhost:8000/Ag/this_week/')
+            setAgThisWeek(response)
+        }
+        fetchData()
+    }, [])
+
+    let agDueThisWeek = Array.from(agThisWeek)
+    let displayAgDueThisWeek = agDueThisWeek.length
+
+    let [skyharvesterToday, setSkyharvesterToday] = useState({})
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data: response } = await axios.get('http://localhost:8000/Skyharvester/today/')
+            setSkyharvesterToday(response)
+        }
+        fetchData()
+    }, [])
+
+    let skyharvesterDueToday = Array.from(skyharvesterToday)
+    let displaySkyharvesterDueToday = skyharvesterDueToday.length
+
+    let [skyharvesterThisWeek, setSkyharvesterThisWeek] = useState({})
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const { data: response } = await axios.get('http://localhost:8000/Skyharvester/this_week/')
+            setSkyharvesterThisWeek(response)
+        }
+        fetchData()
+    }, [])
+
+    let skyharvesterDueThisWeek = Array.from(skyharvesterThisWeek)
+    let displaySkyharvesterDueThisWeek = skyharvesterDueThisWeek.length
 
 
     return (
@@ -18,21 +151,33 @@ function Dashboard() {
             <div className='top'>
                 <div className='Golf industry'>
                     <h3>Golf</h3>
-                    <GolfData />
+                    <Link to={`/Duetoday/Golf/`}><h4>Due Today: {displayGolfDueToday}</h4></Link>
+
+                    <h4>Due This Week: {displayGolfDueThisWeek}</h4>
                 </div>
                 <div className='Landscape industry'>
                     <h3>Landscape</h3>
+                    <Link to={`/Duetoday/Landscape/`}><h4>Due Today: {displayLandscapeDueToday}</h4></Link>
+                    <h4>Due This Week: {displayLandscapeDueThisWeek}</h4>
                 </div>
                 <div className='Muni industry'>
                     <h3>Muni</h3>
+                    <Link to={`/Duetoday/Muni/`}><h4>Due Today: {displayMuniDueToday}</h4></Link>
+                    <h4>Due This Week: {displayMuniDueThisWeek}</h4>
                 </div>
                 <div className='Ag industry'>
                     <h3>Ag</h3>
+                    <Link to={`/Duetoday/Ag/`}><h4>Due Today: {displayAgDueToday}</h4></Link>
+                    <h4>Due This Week: {displayAgDueThisWeek}</h4>
                 </div>
                 <div className='SH industry'>
-                    <h3>SH</h3>
+                    <h3>SkyHarvester</h3>
+                    <Link to={`/Duetoday/Skyharvester/`}><h4>Due Today: {displaySkyharvesterDueToday}</h4></Link>
+                    <h4>Due This Week: {displaySkyharvesterDueThisWeek}</h4>
                 </div>
             </div>
+            <br></br>
+            <br></br>
             <div>
                 <DashboardTable />
             </div>

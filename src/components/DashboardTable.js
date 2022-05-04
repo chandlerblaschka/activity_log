@@ -1080,18 +1080,18 @@ function DashboardTable() {
 
     return (
         <div>
-            <h1>Dashboard Table</h1>
+            <h2>YTD Activity</h2>
             <div className="inputDiv">
                 <Form.Select required size="sm" onChange={(e) => setYear(e.target.value)}>
                     <option value="" hidden>Year</option>
-                    <option>All</option>
+                    {/* <option>All</option> */}
                     <option>2022</option>
                     <option>2021</option>
                     <option>2020</option>
                 </Form.Select>
                 <Form.Select required size="sm" onChange={(e) => setEmployee(e.target.value)}>
-                    <option value="" hidden>Salesman</option>
-                    <option>All</option>
+                    <option value="" hidden>Employee</option>
+                    {/* <option>All</option> */}
                     <option>Blaschka</option>
                     <option>Campbell</option>
                     <option>Gentile</option>
@@ -1107,6 +1107,7 @@ function DashboardTable() {
                     <option>Slingerland</option>
                     <option>Sylvester</option>
                     <option>Thornton</option>
+                    <option>Warren</option>
                     <option>AJC</option>
                     <option>BXR</option>
                     <option>CSB</option>
@@ -1167,7 +1168,7 @@ function DashboardTable() {
                         <td>{octoberBookedOrderTotals}</td>
                         <td>{novemberBookedOrderTotals}</td>
                         <td>{decemberBookedOrderTotals}</td>
-                        <td>{januaryBookedOrderTotals + aprilBookedOrderTotals + februaryBookedOrderTotals + marchBookedOrderTotals + aprilBookedOrderTotals + mayBookedOrderTotals + juneBookedOrderTotals + julyBookedOrderTotals + augustBookedOrderTotals + septemberBookedOrderTotals + octoberBookedOrderTotals + novemberBookedOrderTotals + decemberBookedOrderTotals}</td>
+                        <td>{januaryBookedOrderTotals + februaryBookedOrderTotals + marchBookedOrderTotals + aprilBookedOrderTotals + mayBookedOrderTotals + juneBookedOrderTotals + julyBookedOrderTotals + augustBookedOrderTotals + septemberBookedOrderTotals + octoberBookedOrderTotals + novemberBookedOrderTotals + decemberBookedOrderTotals}</td>
                     </tr>
                     <tr>
                         <td>Budget $</td>
@@ -1183,7 +1184,7 @@ function DashboardTable() {
                         <td>{octoberBudgetRequestTotals}</td>
                         <td>{novemberBudgetRequestTotals}</td>
                         <td>{decemberBudgetRequestTotals}</td>
-                        <td>{januaryBudgetRequestTotals + februaryBudgetRequestTotals + marchBudgetRequestTotals + aprilBudgetRequestTotals + mayBudgetRequestTotals + juneBudgetRequestTotals + julyBudgetRequestTotals + augustBudgetRequestTotals + septemberBudgetRequestTotals + octoberBudgetRequestTotals + novemberBudgetRequestTotals + novemberBudgetRequestTotals + decemberBudgetRequestTotals}</td>
+                        <td>{januaryBudgetRequestTotals + februaryBudgetRequestTotals + marchBudgetRequestTotals + aprilBudgetRequestTotals + mayBudgetRequestTotals + juneBudgetRequestTotals + julyBudgetRequestTotals + augustBudgetRequestTotals + septemberBudgetRequestTotals + octoberBudgetRequestTotals + novemberBudgetRequestTotals + decemberBudgetRequestTotals}</td>
                     </tr>
                     <tr>
                         <td>Change Order</td>
