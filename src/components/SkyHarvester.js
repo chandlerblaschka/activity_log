@@ -1,11 +1,9 @@
 import react, { useEffect, useState } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
-import Container from "react-bootstrap/Container";
 import Table from 'react-bootstrap/Table'
 import axios from "axios";
 import { Link } from 'react-router-dom'
-import Edit from "./Edit"
 
 function Skyharvester(props) {
 
@@ -144,7 +142,7 @@ function Skyharvester(props) {
                 <Button size="sm" type="submit">{buttonText}</Button>
             </Link> */}
             <form onSubmit={(e) => submitPost(e)}>
-                <Table striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
+                <Table responsive striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
                     <thead>
                         <tr>
                             <th>Opportunity Number</th>
@@ -315,7 +313,7 @@ function Skyharvester(props) {
             {/* <Edit /> */}
             <br></br>
             <br></br>
-            <Table striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
+            <Table responsive striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
                 <thead>
                     <tr>
                         <th>Opportunity Number</th>

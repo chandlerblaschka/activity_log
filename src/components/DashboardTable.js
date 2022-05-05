@@ -1082,59 +1082,65 @@ function DashboardTable() {
         <div>
             <h2>YTD Activity</h2>
             <div className="inputDiv">
-                <Form.Select required size="sm" onChange={(e) => setYear(e.target.value)}>
-                    <option value="" hidden>Year</option>
-                    {/* <option>All</option> */}
-                    <option>2022</option>
-                    <option>2021</option>
-                    <option>2020</option>
-                </Form.Select>
-                <Form.Select required size="sm" onChange={(e) => setEmployee(e.target.value)}>
-                    <option value="" hidden>Employee</option>
-                    {/* <option>All</option> */}
-                    <option>Blaschka</option>
-                    <option>Campbell</option>
-                    <option>Gentile</option>
-                    <option>Green</option>
-                    <option>House</option>
-                    <option>Lakel</option>
-                    <option>JVC</option>
-                    <option>Milton</option>
-                    <option>Mock</option>
-                    <option>Palmerton</option>
-                    <option>Pifer</option>
-                    <option>Salisbury</option>
-                    <option>Slingerland</option>
-                    <option>Sylvester</option>
-                    <option>Thornton</option>
-                    <option>Warren</option>
-                    <option>AJC</option>
-                    <option>BXR</option>
-                    <option>CSB</option>
-                    <option>DP</option>
-                    <option>DXT</option>
-                    <option>EE</option>
-                    <option>ESP</option>
-                    <option>ESP</option>
-                    <option>EXR</option>
-                    <option>GAG</option>
-                    <option>GDS</option>
-                    <option>GOZ</option>
-                    <option>JWN</option>
-                    <option>IB</option>
-                    <option>MJH</option>
-                    <option>MJW</option>
-                    <option>MTM</option>
-                    <option>NAV</option>
-                    <option>PJB</option>
-                    <option>RJS</option>
-                    <option>RK</option>
-                    <option>SLM</option>
-                    <option>SRS</option>
-                </Form.Select>
-                <Button onClick={() => FindData(year, month, industry, request, employee)}>Find</Button>
+                <div className="sortForm">
+                    <Form.Select className="tableSelect" required size="sm" onChange={(e) => setYear(e.target.value)}>
+                        <option value="" hidden>Year</option>
+                        {/* <option>All</option> */}
+                        <option>2022</option>
+                        <option>2021</option>
+                        <option>2020</option>
+                    </Form.Select>
+                </div>
+                <div className="sortForm" >
+                    <Form.Select className="tableSelect" required size="sm" onChange={(e) => setEmployee(e.target.value)}>
+                        <option value="" hidden>Employee</option>
+                        {/* <option>All</option> */}
+                        <option>Blaschka</option>
+                        <option>Campbell</option>
+                        <option>Gentile</option>
+                        <option>Green</option>
+                        <option>House</option>
+                        <option>Lakel</option>
+                        <option>JVC</option>
+                        <option>Milton</option>
+                        <option>Mock</option>
+                        <option>Palmerton</option>
+                        <option>Pifer</option>
+                        <option>Salisbury</option>
+                        <option>Slingerland</option>
+                        <option>Sylvester</option>
+                        <option>Thornton</option>
+                        <option>Warren</option>
+                        <option>AJC</option>
+                        <option>BXR</option>
+                        <option>CSB</option>
+                        <option>DP</option>
+                        <option>DXT</option>
+                        <option>EE</option>
+                        <option>ESP</option>
+                        <option>ESP</option>
+                        <option>EXR</option>
+                        <option>GAG</option>
+                        <option>GDS</option>
+                        <option>GOZ</option>
+                        <option>JWN</option>
+                        <option>IB</option>
+                        <option>MJH</option>
+                        <option>MJW</option>
+                        <option>MTM</option>
+                        <option>NAV</option>
+                        <option>PJB</option>
+                        <option>RJS</option>
+                        <option>RK</option>
+                        <option>SLM</option>
+                        <option>SRS</option>
+                    </Form.Select>
+                </div>
+                <div className="sortForm">
+                    <Button className="selectButton" onClick={() => FindData(year, month, industry, request, employee)}>Find</Button>
+                </div>
             </div>
-            <Table striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
+            <Table responsive striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
                 <thead>
                     <tr>
                         <th>Request</th>

@@ -1,6 +1,4 @@
 import react, { useEffect, useState } from "react";
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table'
 import axios from "axios";
 import { useParams } from 'react-router-dom'
@@ -50,7 +48,7 @@ function DueToday(props) {
         <div>
             <h1>{ind} Due Today</h1>
 
-            <Table striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
+            <Table responsive striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
                 <thead>
                     <tr>
                         <th>Opportunity Number</th>

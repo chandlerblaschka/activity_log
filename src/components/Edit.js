@@ -86,7 +86,7 @@ function Edit() {
         <div>
             <h1>Edit Action Item</h1>
             <form onSubmit={(e) => submitPost(e)}>
-                <Table striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
+                <Table responsive striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
                     <thead>
                         <tr>
                             <th>Industry</th>

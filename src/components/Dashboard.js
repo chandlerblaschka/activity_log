@@ -2,13 +2,9 @@
 // import MasterList from "./test";
 // import AddTaskMaster from "./submitForm";
 import React from 'react';
-import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
-import GolfData from './GolfData';
 import '../components/dashboard.css'
 import DashboardTable from './DashboardTable';
 import react, { useEffect, useState } from "react";
-import Container from "react-bootstrap/Container";
-import Table from 'react-bootstrap/Table'
 import axios from "axios";
 import { Link } from 'react-router-dom'
 
