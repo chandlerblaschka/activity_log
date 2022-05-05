@@ -124,8 +124,9 @@ function Landscape(props) {
             comments: comments
         })
             .then(res => {
-                console.log(res);
-                console.log(res.data)
+                axios.post('http://localhost:8000/input/', { entry: res.data.id })
+                // console.log(res);
+                // console.log(res.data)
                 window.location.reload()
             })
             .catch(error => {

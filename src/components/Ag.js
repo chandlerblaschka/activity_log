@@ -44,13 +44,13 @@ function Ag(props) {
     let buttonLink = ''
 
     if (window.location == 'http://localhost:3000/Ag') {
-        console.log("Showing All Ag")
+        // console.log("Showing All Ag")
         buttonText = 'Show Open'
         buttonLink = '/Ag/Open'
     }
 
     if (window.location == 'http://localhost:3000/Ag/Open') {
-        console.log("Showing Open")
+        // console.log("Showing Open")
         buttonText = 'Show All'
         buttonLink = '/Ag'
     }
@@ -124,8 +124,9 @@ function Ag(props) {
             comments: comments
         })
             .then(res => {
-                console.log(res);
-                console.log(res.data)
+                axios.post('http://localhost:8000/input/', { entry: res.data.id })
+                // console.log(res);
+                // console.log(res.data)
                 window.location.reload()
             })
             .catch(error => {
@@ -218,11 +219,14 @@ function Ag(props) {
                                     <option value="" hidden>Salesman</option>
                                     <option>Blaschka</option>
                                     <option>Campbell</option>
+                                    <option>Ewan</option>
                                     <option>Gentile</option>
                                     <option>Green</option>
                                     <option>House</option>
                                     <option>Lakel</option>
+                                    <option>LaRosee</option>
                                     <option>JVC</option>
+                                    <option>Koekemoer</option>
                                     <option>Milton</option>
                                     <option>Mock</option>
                                     <option>Palmerton</option>

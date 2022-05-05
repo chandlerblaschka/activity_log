@@ -44,13 +44,13 @@ function Golf(props) {
     let buttonLink = ''
 
     if (window.location == 'http://localhost:3000/Golf') {
-        console.log("Showing All Golf")
+        // console.log("Showing All Golf")
         buttonText = 'Show Open'
         buttonLink = '/Golf/Open'
     }
 
     if (window.location == 'http://localhost:3000/Golf/Open') {
-        console.log("Showing Open")
+        // console.log("Showing Open")
         buttonText = 'Show All'
         buttonLink = '/Golf'
     }
@@ -124,8 +124,9 @@ function Golf(props) {
             comments: comments
         })
             .then(res => {
-                console.log(res);
-                console.log(res.data)
+                axios.post('http://localhost:8000/input/', { entry: res.data.id })
+                // console.log(res);
+                // console.log(res.data)
                 window.location.reload()
             })
             .catch(error => {
@@ -143,7 +144,7 @@ function Golf(props) {
                 <Button size="sm" type="submit">{buttonText}</Button>
             </Link> */}
             <form onSubmit={(e) => submitPost(e)}>
-                <Table striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
+                <Table responsive striped bordered hover size="sm" style={{ width: "95%", margin: "auto" }}>
                     <thead>
                         <tr>
                             <th>Opportunity Number</th>

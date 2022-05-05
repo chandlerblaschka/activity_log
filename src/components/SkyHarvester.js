@@ -44,13 +44,13 @@ function Skyharvester(props) {
     let buttonLink = ''
 
     if (window.location == 'http://localhost:3000/Skyharvester') {
-        console.log("Showing All Skyharvester")
+        // console.log("Showing All Skyharvester")
         buttonText = 'Show Open'
         buttonLink = '/Skyharvester/Open'
     }
 
     if (window.location == 'http://localhost:3000/Skyharvester/Open') {
-        console.log("Showing Open")
+        // console.log("Showing Open")
         buttonText = 'Show All'
         buttonLink = '/Skyharvester'
     }
@@ -62,7 +62,7 @@ function Skyharvester(props) {
             if (actions[j].id == dueToday[i].id) {
                 // console.log(actions[j].id)
                 indexArray.push(j)
-                console.log(indexArray)
+                // console.log(indexArray)
             }
         }
     }
@@ -124,8 +124,9 @@ function Skyharvester(props) {
             comments: comments
         })
             .then(res => {
-                console.log(res);
-                console.log(res.data)
+                axios.post('http://localhost:8000/input/', { entry: res.data.id })
+                // console.log(res.data.id)
+                // console.log(res.data)
                 window.location.reload()
             })
             .catch(error => {

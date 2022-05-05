@@ -44,13 +44,13 @@ function Muni(props) {
     let buttonLink = ''
 
     if (window.location == 'http://localhost:3000/Muni') {
-        console.log("Showing All Muni")
+        // console.log("Showing All Muni")
         buttonText = 'Show Open'
         buttonLink = '/Muni/Open'
     }
 
     if (window.location == 'http://localhost:3000/Muni/Open') {
-        console.log("Showing Open")
+        // console.log("Showing Open")
         buttonText = 'Show All'
         buttonLink = '/Muni'
     }
@@ -124,8 +124,9 @@ function Muni(props) {
             comments: comments
         })
             .then(res => {
-                console.log(res);
-                console.log(res.data)
+                axios.post('http://localhost:8000/input/', { entry: res.data.id })
+                // console.log(res);
+                // console.log(res.data)
                 window.location.reload()
             })
             .catch(error => {
@@ -223,6 +224,7 @@ function Muni(props) {
                                     <option>House</option>
                                     <option>Lakel</option>
                                     <option>JVC</option>
+                                    <option>Koekemoer</option>
                                     <option>Milton</option>
                                     <option>Mock</option>
                                     <option>Palmerton</option>
@@ -231,6 +233,7 @@ function Muni(props) {
                                     <option>Slingerland</option>
                                     <option>Sylvester</option>
                                     <option>Thornton</option>
+                                    <option>Warren</option>
                                 </Form.Select>
                             </td>
                             <td>

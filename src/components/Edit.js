@@ -66,6 +66,7 @@ function Edit() {
             comments: comments
         })
             .then(res => {
+                axios.post('http://localhost:8000/input/', { entry: res.data.id })
                 console.log(res);
                 console.log(res.data)
                 window.location = `/${industry}/Open`
