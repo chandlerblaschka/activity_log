@@ -79,7 +79,7 @@ function Edit() {
 
     const deleteAction = async (id) => {
         await axios.delete(`https://fathomless-dusk-94922.herokuapp.com/edit/${id}`)
-        window.location = `/${industry}/Open`
+        window.location = `https://radiant-manatee-5e2d5a.netlify.app/${industry}/Open`
     }
 
     return (
