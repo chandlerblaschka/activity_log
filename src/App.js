@@ -34,17 +34,17 @@ function App() {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: golfResponse } = await axios.get('http://localhost:8000/industry/Golf')
+        const { data: golfResponse } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/industry/Golf')
         setGolfData(golfResponse)
-        const { data: landscapeResponse } = await axios.get('http://localhost:8000/industry/Landscape')
+        const { data: landscapeResponse } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/industry/Landscape')
         setLandscapeData(landscapeResponse)
-        const { data: muniResponse } = await axios.get('http://localhost:8000/industry/Muni')
+        const { data: muniResponse } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/industry/Muni')
         setMuniData(muniResponse)
-        const { data: agResponse } = await axios.get('http://localhost:8000/industry/Ag')
+        const { data: agResponse } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/industry/Ag')
         setAgData(agResponse)
-        const { data: skyharvesterResponse } = await axios.get('http://localhost:8000/industry/Skyharvester')
+        const { data: skyharvesterResponse } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/industry/Skyharvester')
         setSkyharvesterData(skyharvesterResponse)
-        const { data: masterResponse } = await axios.get('http://localhost:8000/dashboard/')
+        const { data: masterResponse } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/dashboard/')
         setMasterData(masterResponse)
       } catch (error) {
         console.error(error.message)
@@ -58,7 +58,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data: response } = await axios.get('http://localhost:8000/Golf/open/')
+      const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Golf/open/')
       setGolfDataOpen(response)
     }
     fetchData()
@@ -68,7 +68,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data: response } = await axios.get('http://localhost:8000/Landscape/open/')
+      const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Landscape/open/')
       setLandscapeDataOpen(response)
     }
     fetchData()
@@ -78,7 +78,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data: response } = await axios.get('http://localhost:8000/Muni/open/')
+      const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Muni/open/')
       setMuniDataOpen(response)
     }
     fetchData()
@@ -88,7 +88,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data: response } = await axios.get('http://localhost:8000/Ag/open/')
+      const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Ag/open/')
       setAgDataOpen(response)
     }
     fetchData()
@@ -98,7 +98,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data: response } = await axios.get('http://localhost:8000/Skyharvester/open/')
+      const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Skyharvester/open/')
       setSkyharvesterDataOpen(response)
     }
     fetchData()

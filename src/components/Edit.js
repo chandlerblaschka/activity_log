@@ -25,7 +25,7 @@ function Edit() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/edit/${id}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/edit/${id}`)
             setData(response)
             setIndustry(response.industry)
             setOppNumber(response.oppNumber)
@@ -51,7 +51,7 @@ function Edit() {
     const submitPost = async (e) => {
         e.preventDefault();
 
-        axios.put(`http://localhost:8000/edit/${id}`, {
+        axios.put(`https://fathomless-dusk-94922.herokuapp.com/edit/${id}`, {
             industry: industry,
             oppNumber: oppNumber,
             name: name,
@@ -66,7 +66,7 @@ function Edit() {
             comments: comments
         })
             .then(res => {
-                axios.post('http://localhost:8000/input/', { entry: res.data.id })
+                axios.post('https://fathomless-dusk-94922.herokuapp.com/input/', { entry: res.data.id })
                 console.log(res);
                 console.log(res.data)
                 window.location = `/${industry}/Open`
@@ -78,7 +78,7 @@ function Edit() {
     }
 
     const deleteAction = async (id) => {
-        await axios.delete(`http://localhost:8000/edit/${id}`)
+        await axios.delete(`https://fathomless-dusk-94922.herokuapp.com/edit/${id}`)
         window.location = `/${industry}/Open`
     }
 

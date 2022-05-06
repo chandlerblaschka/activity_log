@@ -14,7 +14,7 @@ function Dashboard() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Golf/today/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Golf/today/')
             setGolfToday(response)
         }
         fetchData()
@@ -27,7 +27,7 @@ function Dashboard() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Golf/this_week/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Golf/this_week/')
             setGolfThisWeek(response)
         }
         fetchData()
@@ -40,7 +40,7 @@ function Dashboard() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Landscape/today/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Landscape/today/')
             setLandscapeToday(response)
         }
         fetchData()
@@ -53,7 +53,7 @@ function Dashboard() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Landscape/this_week/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Landscape/this_week/')
             setLandscapeThisWeek(response)
         }
         fetchData()
@@ -66,7 +66,7 @@ function Dashboard() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Muni/today/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Muni/today/')
             setMuniToday(response)
         }
         fetchData()
@@ -79,7 +79,7 @@ function Dashboard() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Muni/this_week/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Muni/this_week/')
             setMuniThisWeek(response)
         }
         fetchData()
@@ -92,7 +92,7 @@ function Dashboard() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Ag/today/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Ag/today/')
             setAgToday(response)
         }
         fetchData()
@@ -105,7 +105,7 @@ function Dashboard() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Ag/this_week/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Ag/this_week/')
             setAgThisWeek(response)
         }
         fetchData()
@@ -118,7 +118,7 @@ function Dashboard() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Skyharvester/today/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Skyharvester/today/')
             setSkyharvesterToday(response)
         }
         fetchData()
@@ -131,7 +131,7 @@ function Dashboard() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Skyharvester/this_week/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Skyharvester/this_week/')
             setSkyharvesterThisWeek(response)
         }
         fetchData()

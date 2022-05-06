@@ -10,7 +10,7 @@ function Opportunity(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/opportunity/${oppNumber}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/opportunity/${oppNumber}`)
             setOppData(response)
         }
         fetchData()

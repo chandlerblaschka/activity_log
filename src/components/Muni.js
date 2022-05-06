@@ -11,7 +11,7 @@ function Muni(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Muni/today/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Muni/today/')
             setMuniToday(response)
         }
         fetchData()
@@ -24,7 +24,7 @@ function Muni(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Muni/this_week/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Muni/this_week/')
             setMuniThisWeek(response)
         }
         fetchData()
@@ -107,7 +107,7 @@ function Muni(props) {
     const submitPost = async (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:8000/industry/Muni', {
+        axios.post('https://fathomless-dusk-94922.herokuapp.com/industry/Muni', {
             industry: "Muni",
             oppNumber: oppNumber,
             name: name,
@@ -122,7 +122,7 @@ function Muni(props) {
             comments: comments
         })
             .then(res => {
-                axios.post('http://localhost:8000/input/', { entry: res.data.id })
+                axios.post('https://fathomless-dusk-94922.herokuapp.com/input/', { entry: res.data.id })
                 // console.log(res);
                 // console.log(res.data)
                 window.location.reload()

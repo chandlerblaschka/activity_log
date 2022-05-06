@@ -12,7 +12,7 @@ function DueToday(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/${ind}/today/`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/${ind}/today/`)
             setDueToday(response)
         }
         fetchData()

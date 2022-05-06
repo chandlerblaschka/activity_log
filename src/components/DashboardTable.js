@@ -148,531 +148,531 @@ function DashboardTable() {
 
     const FindData = async (year, month, industry, request, employee) => {
         const fetchJanuaryBookData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/01/Book-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/01/Book-Order/${employee}`)
             setJanuaryBookOrder(response)
         }
         const fetchJanuaryBudgetData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/01/Budget/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/01/Budget/${employee}`)
             setJanuaryBudget(response)
         }
         const fetchJanuaryChangeOrderData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/01/Change-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/01/Change-Order/${employee}`)
             setJanuaryChangeOrder(response)
         }
         const fetchJanuaryCsoData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/01/CSO-Dwg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/01/CSO-Dwg/${employee}`)
             setJanuaryCso(response)
         }
         const fetchJanuaryDrawingData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/01/Drawing/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/01/Drawing/${employee}`)
             setJanuaryDrawing(response)
         }
         const fetchJanuaryElecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/01/Elec-Docs/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/01/Elec-Docs/${employee}`)
             setJanuaryElec(response)
         }
         const fetchJanuaryOtherData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/01/Other/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/01/Other/${employee}`)
             setJanuaryOther(response)
         }
         const fetchJanuaryQuoteData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/01/Quote/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/01/Quote/${employee}`)
             setJanuaryQuote(response)
         }
         const fetchJanuaryReleaseData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/01/Release-Mtg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/01/Release-Mtg/${employee}`)
             setJanuaryRelease(response)
         }
         const fetchJanuarySpecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/01/Spec/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/01/Spec/${employee}`)
             setJanuarySpec(response)
         }
         const fetchJanuarySubmittalData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/01/Sub-OM/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/01/Sub-OM/${employee}`)
             setJanuarySubmittal(response)
         }
         const fetchFebruaryBookData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/02/Book-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/02/Book-Order/${employee}`)
             setFebruaryBookOrder(response)
         }
         const fetchFebruaryBudgetData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/02/Budget/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/02/Budget/${employee}`)
             setFebruaryBudget(response)
         }
         const fetchFebruaryChangeOrderData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/02/Change-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/02/Change-Order/${employee}`)
             setFebruaryChangeOrder(response)
         }
         const fetchFebruaryCsoData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/02/CSO-Dwg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/02/CSO-Dwg/${employee}`)
             setFebruaryCso(response)
         }
         const fetchFebruaryDrawingData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/02/Drawing/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/02/Drawing/${employee}`)
             setFebruaryDrawing(response)
         }
         const fetchFebruaryElecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/02/Elec-Docs/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/02/Elec-Docs/${employee}`)
             setFebruaryElec(response)
         }
         const fetchFebruaryOtherData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/02/Other/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/02/Other/${employee}`)
             setFebruaryOther(response)
         }
         const fetchFebruaryQuoteData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/02/Quote/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/02/Quote/${employee}`)
             setFebruaryQuote(response)
         }
         const fetchFebruaryReleaseData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/02/Release-Mtg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/02/Release-Mtg/${employee}`)
             setFebruaryRelease(response)
         }
         const fetchFebruarySpecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/02/Spec/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/02/Spec/${employee}`)
             setFebruarySpec(response)
         }
         const fetchFebruarySubmittalData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/02/Sub-OM/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/02/Sub-OM/${employee}`)
             setFebruarySubmittal(response)
         }
         const fetchMarchBookData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/03/Book-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/03/Book-Order/${employee}`)
             setMarchBookOrder(response)
         }
         const fetchMarchBudgetData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/03/Budget/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/03/Budget/${employee}`)
             setMarchBudget(response)
         }
         const fetchMarchChangeOrderData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/03/Change-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/03/Change-Order/${employee}`)
             setMarchChangeOrder(response)
         }
         const fetchMarchCsoData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/03/CSO-Dwg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/03/CSO-Dwg/${employee}`)
             setMarchCso(response)
         }
         const fetchMarchDrawingData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/03/Drawing/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/03/Drawing/${employee}`)
             setMarchDrawing(response)
         }
         const fetchMarchElecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/03/Elec-Docs/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/03/Elec-Docs/${employee}`)
             setMarchElec(response)
         }
         const fetchMarchOtherData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/03/Other/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/03/Other/${employee}`)
             setMarchOther(response)
         }
         const fetchMarchQuoteData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/03/Quote/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/03/Quote/${employee}`)
             setMarchQuote(response)
         }
         const fetchMarchReleaseData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/03/Release-Mtg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/03/Release-Mtg/${employee}`)
             setMarchRelease(response)
         }
         const fetchMarchSpecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/03/Spec/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/03/Spec/${employee}`)
             setMarchSpec(response)
         }
         const fetchMarchSubmittalData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/03/Sub-OM/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/03/Sub-OM/${employee}`)
             setMarchSubmittal(response)
         }
         const fetchAprilBookData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/04/Book-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/04/Book-Order/${employee}`)
             setAprilBookOrder(response)
         }
         const fetchAprilBudgetData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/04/Budget/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/04/Budget/${employee}`)
             setAprilBudget(response)
         }
         const fetchAprilChangeOrderData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/04/Change-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/04/Change-Order/${employee}`)
             setAprilChangeOrder(response)
         }
         const fetchAprilCsoData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/04/CSO-Dwg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/04/CSO-Dwg/${employee}`)
             setAprilCso(response)
         }
         const fetchAprilDrawingData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/04/Drawing/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/04/Drawing/${employee}`)
             setAprilDrawing(response)
         }
         const fetchAprilElecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/04/Elec-Docs/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/04/Elec-Docs/${employee}`)
             setAprilElec(response)
         }
         const fetchAprilOtherData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/04/Other/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/04/Other/${employee}`)
             setAprilOther(response)
         }
         const fetchAprilQuoteData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/04/Quote/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/04/Quote/${employee}`)
             setAprilQuote(response)
         }
         const fetchAprilReleaseData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/04/Release-Mtg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/04/Release-Mtg/${employee}`)
             setAprilRelease(response)
         }
         const fetchAprilSpecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/04/Spec/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/04/Spec/${employee}`)
             setAprilSpec(response)
         }
         const fetchAprilSubmittalData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/04/Sub-OM/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/04/Sub-OM/${employee}`)
             setAprilSubmittal(response)
         }
         const fetchMayBookData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/05/Book-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/05/Book-Order/${employee}`)
             setMayBookOrder(response)
         }
         const fetchMayBudgetData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/05/Budget/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/05/Budget/${employee}`)
             setMayBudget(response)
         }
         const fetchMayChangeOrderData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/05/Change-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/05/Change-Order/${employee}`)
             setMayChangeOrder(response)
         }
         const fetchMayCsoData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/05/CSO-Dwg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/05/CSO-Dwg/${employee}`)
             setMayCso(response)
         }
         const fetchMayDrawingData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/05/Drawing/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/05/Drawing/${employee}`)
             setMayDrawing(response)
         }
         const fetchMayElecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/05/Elec-Docs/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/05/Elec-Docs/${employee}`)
             setMayElec(response)
         }
         const fetchMayOtherData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/05/Other/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/05/Other/${employee}`)
             setMayOther(response)
         }
         const fetchMayQuoteData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/05/Quote/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/05/Quote/${employee}`)
             setMayQuote(response)
         }
         const fetchMayReleaseData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/05/Release-Mtg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/05/Release-Mtg/${employee}`)
             setMayRelease(response)
         }
         const fetchMaySpecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/05/Spec/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/05/Spec/${employee}`)
             setMaySpec(response)
         }
         const fetchMaySubmittalData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/05/Sub-OM/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/05/Sub-OM/${employee}`)
             setMaySubmittal(response)
         }
         const fetchJuneBookData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/06/Book-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/06/Book-Order/${employee}`)
             setJuneBookOrder(response)
         }
         const fetchJuneBudgetData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/06/Budget/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/06/Budget/${employee}`)
             setJuneBudget(response)
         }
         const fetchJuneChangeOrderData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/06/Change-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/06/Change-Order/${employee}`)
             setJuneChangeOrder(response)
         }
         const fetchJuneCsoData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/06/CSO-Dwg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/06/CSO-Dwg/${employee}`)
             setJuneCso(response)
         }
         const fetchJuneDrawingData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/06/Drawing/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/06/Drawing/${employee}`)
             setJuneDrawing(response)
         }
         const fetchJuneElecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/06/Elec-Docs/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/06/Elec-Docs/${employee}`)
             setJuneElec(response)
         }
         const fetchJuneOtherData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/06/Other/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/06/Other/${employee}`)
             setJuneOther(response)
         }
         const fetchJuneQuoteData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/06/Quote/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/06/Quote/${employee}`)
             setJuneQuote(response)
         }
         const fetchJuneReleaseData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/06/Release-Mtg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/06/Release-Mtg/${employee}`)
             setJuneRelease(response)
         }
         const fetchJuneSpecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/06/Spec/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/06/Spec/${employee}`)
             setJuneSpec(response)
         }
         const fetchJuneSubmittalData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/06/Sub-OM/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/06/Sub-OM/${employee}`)
             setJuneSubmittal(response)
         }
         const fetchJulyBookData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/07/Book-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/07/Book-Order/${employee}`)
             setJulyBookOrder(response)
         }
         const fetchJulyBudgetData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/07/Budget/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/07/Budget/${employee}`)
             setJulyBudget(response)
         }
         const fetchJulyChangeOrderData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/07/Change-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/07/Change-Order/${employee}`)
             setJulyChangeOrder(response)
         }
         const fetchJulyCsoData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/07/CSO-Dwg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/07/CSO-Dwg/${employee}`)
             setJulyCso(response)
         }
         const fetchJulyDrawingData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/07/Drawing/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/07/Drawing/${employee}`)
             setJulyDrawing(response)
         }
         const fetchJulyElecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/07/Elec-Docs/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/07/Elec-Docs/${employee}`)
             setJulyElec(response)
         }
         const fetchJulyOtherData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/07/Other/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/07/Other/${employee}`)
             setJulyOther(response)
         }
         const fetchJulyQuoteData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/07/Quote/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/07/Quote/${employee}`)
             setJulyQuote(response)
         }
         const fetchJulyReleaseData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/07/Release-Mtg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/07/Release-Mtg/${employee}`)
             setJulyRelease(response)
         }
         const fetchJulySpecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/07/Spec/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/07/Spec/${employee}`)
             setJulySpec(response)
         }
         const fetchJulySubmittalData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/07/Sub-OM/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/07/Sub-OM/${employee}`)
             setJulySubmittal(response)
         }
         const fetchAugustBookData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/08/Book-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/08/Book-Order/${employee}`)
             setAugustBookOrder(response)
         }
         const fetchAugustBudgetData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/08/Budget/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/08/Budget/${employee}`)
             setAugustBudget(response)
         }
         const fetchAugustChangeOrderData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/08/Change-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/08/Change-Order/${employee}`)
             setAugustChangeOrder(response)
         }
         const fetchAugustCsoData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/08/CSO-Dwg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/08/CSO-Dwg/${employee}`)
             setAugustCso(response)
         }
         const fetchAugustDrawingData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/08/Drawing/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/08/Drawing/${employee}`)
             setAugustDrawing(response)
         }
         const fetchAugustElecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/08/Elec-Docs/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/08/Elec-Docs/${employee}`)
             setAugustElec(response)
         }
         const fetchAugustOtherData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/08/Other/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/08/Other/${employee}`)
             setAugustOther(response)
         }
         const fetchAugustQuoteData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/08/Quote/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/08/Quote/${employee}`)
             setAugustQuote(response)
         }
         const fetchAugustReleaseData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/08/Release-Mtg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/08/Release-Mtg/${employee}`)
             setAugustRelease(response)
         }
         const fetchAugustSpecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/08/Spec/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/08/Spec/${employee}`)
             setAugustSpec(response)
         }
         const fetchAugustSubmittalData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/08/Sub-OM/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/08/Sub-OM/${employee}`)
             setAugustSubmittal(response)
         }
         const fetchSeptemberBookData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/09/Book-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/09/Book-Order/${employee}`)
             setSeptemberBookOrder(response)
         }
         const fetchSeptemberBudgetData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/09/Budget/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/09/Budget/${employee}`)
             setSeptemberBudget(response)
         }
         const fetchSeptemberChangeOrderData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/09/Change-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/09/Change-Order/${employee}`)
             setSeptemberChangeOrder(response)
         }
         const fetchSeptemberCsoData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/09/CSO-Dwg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/09/CSO-Dwg/${employee}`)
             setSeptemberCso(response)
         }
         const fetchSeptemberDrawingData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/09/Drawing/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/09/Drawing/${employee}`)
             setSeptemberDrawing(response)
         }
         const fetchSeptemberElecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/09/Elec-Docs/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/09/Elec-Docs/${employee}`)
             setSeptemberElec(response)
         }
         const fetchSeptemberOtherData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/09/Other/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/09/Other/${employee}`)
             setSeptemberOther(response)
         }
         const fetchSeptemberQuoteData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/09/Quote/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/09/Quote/${employee}`)
             setSeptemberQuote(response)
         }
         const fetchSeptemberReleaseData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/09/Release-Mtg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/09/Release-Mtg/${employee}`)
             setSeptemberRelease(response)
         }
         const fetchSeptemberSpecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/09/Spec/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/09/Spec/${employee}`)
             setSeptemberSpec(response)
         }
         const fetchSeptemberSubmittalData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/09/Sub-OM/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/09/Sub-OM/${employee}`)
             setSeptemberSubmittal(response)
         }
         const fetchOctoberBookData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/10/Book-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/10/Book-Order/${employee}`)
             setOctoberBookOrder(response)
         }
         const fetchOctoberBudgetData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/10/Budget/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/10/Budget/${employee}`)
             setOctoberBudget(response)
         }
         const fetchOctoberChangeOrderData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/10/Change-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/10/Change-Order/${employee}`)
             setOctoberChangeOrder(response)
         }
         const fetchOctoberCsoData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/10/CSO-Dwg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/10/CSO-Dwg/${employee}`)
             setOctoberCso(response)
         }
         const fetchOctoberDrawingData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/10/Drawing/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/10/Drawing/${employee}`)
             setOctoberDrawing(response)
         }
         const fetchOctoberElecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/10/Elec-Docs/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/10/Elec-Docs/${employee}`)
             setOctoberElec(response)
         }
         const fetchOctoberOtherData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/10/Other/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/10/Other/${employee}`)
             setOctoberOther(response)
         }
         const fetchOctoberQuoteData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/10/Quote/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/10/Quote/${employee}`)
             setOctoberQuote(response)
         }
         const fetchOctoberReleaseData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/10/Release-Mtg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/10/Release-Mtg/${employee}`)
             setOctoberRelease(response)
         }
         const fetchOctoberSpecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/10/Spec/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/10/Spec/${employee}`)
             setOctoberSpec(response)
         }
         const fetchOctoberSubmittalData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/10/Sub-OM/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/10/Sub-OM/${employee}`)
             setOctoberSubmittal(response)
         }
         const fetchNovemberBookData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/11/Book-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/11/Book-Order/${employee}`)
             setNovemberBookOrder(response)
         }
         const fetchNovemberBudgetData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/11/Budget/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/11/Budget/${employee}`)
             setNovemberBudget(response)
         }
         const fetchNovemberChangeOrderData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/11/Change-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/11/Change-Order/${employee}`)
             setNovemberChangeOrder(response)
         }
         const fetchNovemberCsoData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/11/CSO-Dwg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/11/CSO-Dwg/${employee}`)
             setNovemberCso(response)
         }
         const fetchNovemberDrawingData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/11/Drawing/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/11/Drawing/${employee}`)
             setNovemberDrawing(response)
         }
         const fetchNovemberElecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/11/Elec-Docs/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/11/Elec-Docs/${employee}`)
             setNovemberElec(response)
         }
         const fetchNovemberOtherData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/11/Other/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/11/Other/${employee}`)
             setNovemberOther(response)
         }
         const fetchNovemberQuoteData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/11/Quote/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/11/Quote/${employee}`)
             setNovemberQuote(response)
         }
         const fetchNovemberReleaseData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/11/Release-Mtg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/11/Release-Mtg/${employee}`)
             setNovemberRelease(response)
         }
         const fetchNovemberSpecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/11/Spec/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/11/Spec/${employee}`)
             setNovemberSpec(response)
         }
         const fetchNovemberSubmittalData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/11/Sub-OM/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/11/Sub-OM/${employee}`)
             setNovemberSubmittal(response)
         }
         const fetchDecemberBookData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/12/Book-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/12/Book-Order/${employee}`)
             setDecemberBookOrder(response)
         }
         const fetchDecemberBudgetData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/12/Budget/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/12/Budget/${employee}`)
             setDecemberBudget(response)
         }
         const fetchDecemberChangeOrderData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/12/Change-Order/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/12/Change-Order/${employee}`)
             setDecemberChangeOrder(response)
         }
         const fetchDecemberCsoData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/12/CSO-Dwg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/12/CSO-Dwg/${employee}`)
             setDecemberCso(response)
         }
         const fetchDecemberDrawingData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/12/Drawing/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/12/Drawing/${employee}`)
             setDecemberDrawing(response)
         }
         const fetchDecemberElecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/12/Elec-Docs/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/12/Elec-Docs/${employee}`)
             setDecemberElec(response)
         }
         const fetchDecemberOtherData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/12/Other/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/12/Other/${employee}`)
             setDecemberOther(response)
         }
         const fetchDecemberQuoteData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/12/Quote/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/12/Quote/${employee}`)
             setDecemberQuote(response)
         }
         const fetchDecemberReleaseData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/12/Release-Mtg/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/12/Release-Mtg/${employee}`)
             setDecemberRelease(response)
         }
         const fetchDecemberSpecData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/12/Spec/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/12/Spec/${employee}`)
             setDecemberSpec(response)
         }
         const fetchDecemberSubmittalData = async () => {
-            const { data: response } = await axios.get(`http://localhost:8000/dashboard/${year}/12/Sub-OM/${employee}`)
+            const { data: response } = await axios.get(`https://fathomless-dusk-94922.herokuapp.com/dashboard/${year}/12/Sub-OM/${employee}`)
             setDecemberSubmittal(response)
         }
 

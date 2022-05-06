@@ -11,7 +11,7 @@ function Golf(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Golf/today/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Golf/today/')
             setGolfToday(response)
         }
         fetchData()
@@ -24,7 +24,7 @@ function Golf(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Golf/this_week/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Golf/this_week/')
             setGolfThisWeek(response)
         }
         fetchData()
@@ -107,7 +107,7 @@ function Golf(props) {
     const submitPost = async (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:8000/industry/Golf', {
+        axios.post('https://fathomless-dusk-94922.herokuapp.com/industry/Golf', {
             industry: "Golf",
             oppNumber: oppNumber,
             name: name,
@@ -122,7 +122,7 @@ function Golf(props) {
             comments: comments
         })
             .then(res => {
-                axios.post('http://localhost:8000/input/', { entry: res.data.id })
+                axios.post('https://fathomless-dusk-94922.herokuapp.com/input/', { entry: res.data.id })
                 // console.log(res);
                 // console.log(res.data)
                 window.location.reload()

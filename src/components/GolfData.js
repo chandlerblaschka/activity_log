@@ -20,7 +20,7 @@ function GolfData() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/dashboard/Golf/Book-Order')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/dashboard/Golf/Book-Order')
             setBookOrderData(response)
         }
         fetchData()
@@ -29,7 +29,7 @@ function GolfData() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/dashboard/Golf/Budget')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/dashboard/Golf/Budget')
             setBudgetReqData(response)
         }
         fetchData()
@@ -38,7 +38,7 @@ function GolfData() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/dashboard/Golf/CSO-Dwg')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/dashboard/Golf/CSO-Dwg')
             setCsoReqData(response)
         }
         fetchData()
@@ -47,7 +47,7 @@ function GolfData() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/dashboard/Golf/Drawing')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/dashboard/Golf/Drawing')
             setDrawingData(response)
         }
         fetchData()
@@ -56,7 +56,7 @@ function GolfData() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/dashboard/Golf/Elec-Docs')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/dashboard/Golf/Elec-Docs')
             setElecData(response)
         }
         fetchData()
@@ -65,7 +65,7 @@ function GolfData() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/dashboard/Golf/Other')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/dashboard/Golf/Other')
             setOtherData(response)
         }
         fetchData()
@@ -74,7 +74,7 @@ function GolfData() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/dashboard/Golf/Quote')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/dashboard/Golf/Quote')
             setQuoteData(response)
         }
         fetchData()
@@ -83,7 +83,7 @@ function GolfData() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/dashboard/Golf/Release-Mtg')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/dashboard/Golf/Release-Mtg')
             setReleaseData(response)
         }
         fetchData()
@@ -92,7 +92,7 @@ function GolfData() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/dashboard/Golf/Spec')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/dashboard/Golf/Spec')
             setSpecData(response)
         }
         fetchData()
@@ -101,7 +101,7 @@ function GolfData() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/dashboard/Golf/Sub-OM')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/dashboard/Golf/Sub-OM')
             setSubmittalData(response)
         }
         fetchData()
@@ -110,7 +110,7 @@ function GolfData() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/dashboard/Golf/Change-Order')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/dashboard/Golf/Change-Order')
             setChangeOrderData(response)
         }
         fetchData()

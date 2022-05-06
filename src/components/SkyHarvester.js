@@ -11,7 +11,7 @@ function Skyharvester(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Skyharvester/today/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Skyharvester/today/')
             setSkyharvesterToday(response)
         }
         fetchData()
@@ -24,7 +24,7 @@ function Skyharvester(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Skyharvester/this_week/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Skyharvester/this_week/')
             setSkyharvesterThisWeek(response)
         }
         fetchData()
@@ -107,7 +107,7 @@ function Skyharvester(props) {
     const submitPost = async (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:8000/industry/Skyharvester', {
+        axios.post('https://fathomless-dusk-94922.herokuapp.com/industry/Skyharvester', {
             industry: "Skyharvester",
             oppNumber: oppNumber,
             name: name,
@@ -122,7 +122,7 @@ function Skyharvester(props) {
             comments: comments
         })
             .then(res => {
-                axios.post('http://localhost:8000/input/', { entry: res.data.id })
+                axios.post('https://fathomless-dusk-94922.herokuapp.com/input/', { entry: res.data.id })
                 // console.log(res.data.id)
                 // console.log(res.data)
                 window.location.reload()

@@ -11,7 +11,7 @@ function Landscape(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Landscape/today/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Landscape/today/')
             setLandscapeToday(response)
         }
         fetchData()
@@ -24,7 +24,7 @@ function Landscape(props) {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data: response } = await axios.get('http://localhost:8000/Landscape/this_week/')
+            const { data: response } = await axios.get('https://fathomless-dusk-94922.herokuapp.com/Landscape/this_week/')
             setLandscapeThisWeek(response)
         }
         fetchData()
@@ -107,7 +107,7 @@ function Landscape(props) {
     const submitPost = async (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:8000/industry/Landscape', {
+        axios.post('https://fathomless-dusk-94922.herokuapp.com/industry/Landscape', {
             industry: "Landscape",
             oppNumber: oppNumber,
             name: name,
@@ -122,7 +122,7 @@ function Landscape(props) {
             comments: comments
         })
             .then(res => {
-                axios.post('http://localhost:8000/input/', { entry: res.data.id })
+                axios.post('https://fathomless-dusk-94922.herokuapp.com/input/', { entry: res.data.id })
                 // console.log(res);
                 // console.log(res.data)
                 window.location.reload()
