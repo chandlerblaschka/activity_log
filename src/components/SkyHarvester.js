@@ -41,13 +41,13 @@ function Skyharvester(props) {
     let buttonText = ''
     let buttonLink = ''
 
-    if (window.location == 'http://localhost:3000/Skyharvester') {
+    if (window.location == 'https://radiant-manatee-5e2d5a.netlify.app/Skyharvester') {
         // console.log("Showing All Skyharvester")
         buttonText = 'Show Open'
         buttonLink = '/Skyharvester/Open'
     }
 
-    if (window.location == 'http://localhost:3000/Skyharvester/Open') {
+    if (window.location == 'https://radiant-manatee-5e2d5a.netlify.app/Skyharvester/Open') {
         // console.log("Showing Open")
         buttonText = 'Show All'
         buttonLink = '/Skyharvester'

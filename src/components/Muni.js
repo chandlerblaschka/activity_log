@@ -41,13 +41,13 @@ function Muni(props) {
     let buttonText = ''
     let buttonLink = ''
 
-    if (window.location == 'http://localhost:3000/Muni') {
+    if (window.location == 'https://radiant-manatee-5e2d5a.netlify.app/Muni') {
         // console.log("Showing All Muni")
         buttonText = 'Show Open'
         buttonLink = '/Muni/Open'
     }
 
-    if (window.location == 'http://localhost:3000/Muni/Open') {
+    if (window.location == 'https://radiant-manatee-5e2d5a.netlify.app/Muni/Open') {
         // console.log("Showing Open")
         buttonText = 'Show All'
         buttonLink = '/Muni'

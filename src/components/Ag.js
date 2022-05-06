@@ -41,13 +41,13 @@ function Ag(props) {
     let buttonText = ''
     let buttonLink = ''
 
-    if (window.location == 'http://localhost:3000/Ag') {
+    if (window.location == 'https://radiant-manatee-5e2d5a.netlify.app/Ag') {
         // console.log("Showing All Ag")
         buttonText = 'Show Open'
         buttonLink = '/Ag/Open'
     }
 
-    if (window.location == 'http://localhost:3000/Ag/Open') {
+    if (window.location == 'https://radiant-manatee-5e2d5a.netlify.app/Ag/Open') {
         // console.log("Showing Open")
         buttonText = 'Show All'
         buttonLink = '/Ag'

@@ -41,13 +41,13 @@ function Landscape(props) {
     let buttonText = ''
     let buttonLink = ''
 
-    if (window.location == 'http://localhost:3000/Landscape') {
+    if (window.location == 'https://radiant-manatee-5e2d5a.netlify.app/Landscape') {
         console.log("Showing All Landscape")
         buttonText = 'Show Open'
         buttonLink = '/Landscape/Open'
     }
 
-    if (window.location == 'http://localhost:3000/Landscape/Open') {
+    if (window.location == 'https://radiant-manatee-5e2d5a.netlify.app/Landscape/Open') {
         console.log("Showing Open")
         buttonText = 'Show All'
         buttonLink = '/Landscape'

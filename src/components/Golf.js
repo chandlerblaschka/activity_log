@@ -41,13 +41,13 @@ function Golf(props) {
     let buttonText = ''
     let buttonLink = ''
 
-    if (window.location == 'http://localhost:3000/Golf') {
+    if (window.location == 'https://radiant-manatee-5e2d5a.netlify.app/Golf') {
         // console.log("Showing All Golf")
         buttonText = 'Show Open'
         buttonLink = '/Golf/Open'
     }
 
-    if (window.location == 'http://localhost:3000/Golf/Open') {
+    if (window.location == 'https://radiant-manatee-5e2d5a.netlify.app/Golf/Open') {
         // console.log("Showing Open")
         buttonText = 'Show All'
         buttonLink = '/Golf'
